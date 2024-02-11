@@ -1,3 +1,5 @@
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +26,8 @@
                         <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <!-- Additional navigation items -->
+                    <a href="{% url 'logout' %}" class="btn btn-warning">Logout</a>
+
                 </ul>
             </div>
         </nav>
