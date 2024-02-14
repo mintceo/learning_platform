@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Logged Out{% endblock %}
+
+{% load static %}  <!-- Load the static tag to use static files -->
+
+{% block content %}
+<div class="container mt-4">
+    <!-- Confirmation Message -->
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">You have been logged out!</h4>
+        <p>Thank you for visiting. You are now logged out. Feel free to browse our blog or check out some interesting articles.</p>
+        <hr>
+        <p class="mb-0">Whenever you're ready to log in again, just click <a href="{% url 'login' %}" class="alert-link">here</a>.</p>
+    </div>
+
+    <!-- Blog Area -->
+    <div class="blog-area mt-5">
+        <h2>Latest Blog Posts</h2>
+        <!-- Placeholder for Blog Posts -->
+        <div class="row">
+            <!-- Example Blog Post Summary -->
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="{% static 'path/to/image1.jpg' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Blog Post Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for more blog posts -->
+        </div>
+    </div>
+
+    <!-- Additional Content -->
+    <div class="additional-content mt-5">
+        <h3>Interesting Reads</h3>
+        <!-- Placeholder for additional content or images -->
+        <p>Place additional content, images, or links to articles here.</p>
+    </div>
+</div>
+{% endblock %}
